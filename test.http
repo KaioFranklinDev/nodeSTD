@@ -1,0 +1,46 @@
+POST  https://nodestd.onrender.com/videos
+Content-type: application/json
+
+{
+    "title": "video 10",
+    "description": "neymar mvp top 10",
+    "duration": 30
+}
+
+### 
+
+GET https://nodestd.onrender.com/videos
+
+###
+
+GET http://localhost:3333/videos?search=01
+
+###
+
+PUT  https://nodestd.onrender.com/videos/8d362bdf-e104-4815-b183-63ffdd7ace6a
+Content-type: application/json
+
+{
+    "title": "videio sobre o kaio f",
+    "description": "kaio",
+    "duration": 190
+}
+
+###
+
+DELETE https://nodestd.onrender.com/videos/2152eeda-585a-46ae-8871-171dc98fbd9d
+
+### 
+
+GET http://localhost:3333/videos
+
+###
+
+POST  http://localhost:3333/videos
+Content-type: application/json
+
+{
+    "title": "video 4",
+    "description": "JHIN 4 BALAS",
+    "duration": 44
+}
