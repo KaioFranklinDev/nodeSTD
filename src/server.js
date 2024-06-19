@@ -32,12 +32,15 @@ server.get('/videos', async (request) =>{
     return videos
 })
 
+<<<<<<< HEAD
 server.get('/users', async (request) =>{
     const search = request.query.search
     const users = await database.list(search)
     return users
 })
 
+=======
+>>>>>>> c4368ec949be9466d97183161e17c86e691507c5
 server.put('/videos/:id', async (request, reply) =>{
     const videoId = request.params.id
     const {title, description, duration} = request.body   
@@ -62,6 +65,8 @@ server.delete('/videos/:id', async (request, reply) =>{
 server.listen({
     host: '0.0.0.0',
     port: process.env.PORT ?? 3333,
+
 })
 
-console.log("rodadno")
+
+

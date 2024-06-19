@@ -7,6 +7,7 @@ sql`drop table if exists videos`.then(() =>{
 */
 
 sql`
+<<<<<<< HEAD
     CREATE TABLE users (
     id TEXT PRIMARY KEY,
     nome TEXT NOT NULL,
@@ -16,6 +17,14 @@ sql`
     data TEXT NOT NULL
 );
 
+=======
+    CREATE TABLE videos(
+        id          TEXT PRIMARY KEY,
+        title       TEXT,
+        description TEXT,
+        duration    INTEGER
+    );
+>>>>>>> c4368ec949be9466d97183161e17c86e691507c5
 
 `.then(() =>{
     console.log('Tabela criada!')
