@@ -7,12 +7,15 @@ sql`drop table if exists videos`.then(() =>{
 */
 
 sql`
-    CREATE TABLE videos(
-        id          TEXT PRIMARY KEY,
-        title       TEXT,
-        description TEXT,
-        duration    INTEGER
-    );
+    CREATE TABLE users (
+    id TEXT PRIMARY KEY,
+    nome TEXT NOT NULL,
+    peso REAL NOT NULL,
+    altura REAL NOT NULL,
+    imc REAL NOT NULL,
+    data TEXT NOT NULL
+);
+
 
 `.then(() =>{
     console.log('Tabela criada!')

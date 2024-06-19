@@ -8,9 +8,9 @@ export class DatabasePostgres {
     async list(search){
         let videos
         if(search){
-            videos = await sql`select * FROM videos WHERE title ilike ${'%'+search+'%'}`
+            videos = await sql`select * FROM users WHERE title ilike ${'%'+search+'%'}`
         }else{
-            videos = await sql`select * FROM videos`
+            videos = await sql`select * FROM users`
         }
         return videos        
           

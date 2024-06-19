@@ -32,6 +32,12 @@ server.get('/videos', async (request) =>{
     return videos
 })
 
+server.get('/users', async (request) =>{
+    const search = request.query.search
+    const users = await database.list(search)
+    return users
+})
+
 server.put('/videos/:id', async (request, reply) =>{
     const videoId = request.params.id
     const {title, description, duration} = request.body   
@@ -57,3 +63,5 @@ server.listen({
     host: '0.0.0.0',
     port: process.env.PORT ?? 3333,
 })
+
+console.log("rodadno")
