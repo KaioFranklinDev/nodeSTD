@@ -26,6 +26,22 @@ server.post('/videos', async (request , reply) =>{
     return reply.status(201).send()
 })
 
+server.post('/users', async (request , reply) =>{
+    const { id, nome, peso, altura, imc, data} = request.body    
+    await database.create({
+        id: id,
+        nome: nome,
+        peso: peso,
+        altura: altura,
+        imc: imc,
+        data: data,
+    })
+
+    console.log("tentou fazer post")
+
+    return reply.status(201).send()
+})
+
 server.get('/videos', async (request) =>{
     const search = request.query.search
     const videos = await database.list(search)

@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto'
 import {sql} from './db.js'
-import { title } from 'node:process'
+
  
 export class DatabasePostgres {
     #videos = new Map()
@@ -22,6 +22,11 @@ export class DatabasePostgres {
         const videoId = randomUUID()
         const {title, description, duration} = video
         await sql`insert into videos (id,title,description,duration) VALUES (${videoId},${title},${description},${duration})`
+    }
+
+    async create(user) {
+        const {id, nome, peso, altura, imc, data} = user
+        await sql`insert into users (id, nome, peso, altura, imc, data) VALUES (${id},${nome},${peso},${altura},${imc},${data})`
     }
 
     async update( id, video) {
